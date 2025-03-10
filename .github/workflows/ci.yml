@@ -15,6 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3  # Checkout the repository code
 
+      - name: List files (debug step)
+        run: ls -al  # List files in the working directory
+
+      - name: Change directory to subdir
+        run: cd subdir  # Navigate to the sub-directory containing package.json
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
